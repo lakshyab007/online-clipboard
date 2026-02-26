@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Linkedin, ArrowRight } from 'lucide-react';
+import { User, Mail, Lock, ArrowRight } from 'lucide-react';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 import { Card, CardContent } from '../components/Card';
@@ -10,7 +10,6 @@ export function Signup({ onLogin }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    linkedin: '',
     password: '',
     confirmPassword: '',
   });
@@ -96,18 +95,6 @@ export function Signup({ onLogin }) {
                 placeholder="your@email.com"
                 required
                 disabled={loading}
-              />
-
-              {/* LinkedIn Input */}
-              <Input
-                label="LinkedIn Profile (Optional)"
-                type="url"
-                name="linkedin"
-                value={formData.linkedin}
-                onChange={handleChange}
-                placeholder="https://linkedin.com/in/your-profile"
-                disabled={loading}
-                helperText="Help others find you on LinkedIn"
               />
 
               {/* Password Input */}
