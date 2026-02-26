@@ -48,11 +48,11 @@ if command -v psql &> /dev/null; then
     fi
 
     # Check if database exists
-    if psql -U postgres -lqt | cut -d \| -f 1 | grep -qw lux_project 2>/dev/null; then
-        print_status 0 "Database 'lux_project' exists"
+    if psql -U postgres -lqt | cut -d \| -f 1 | grep -qw online_clipboard 2>/dev/null; then
+        print_status 0 "Database 'online_clipboard' exists"
     else
-        print_status 1 "Database 'lux_project' does NOT exist"
-        print_info "Create it with: psql -U postgres -c \"CREATE DATABASE lux_project;\""
+        print_status 1 "Database 'online_clipboard' does NOT exist"
+        print_info "Create it with: psql -U postgres -c \"CREATE DATABASE online_clipboard;\""
     fi
 else
     print_status 1 "PostgreSQL is NOT installed"

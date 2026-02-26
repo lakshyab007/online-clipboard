@@ -31,16 +31,16 @@ fi
 echo -e "${GREEN}✓${NC} PostgreSQL is running"
 
 # Check if database exists
-if ! psql -U postgres -lqt | cut -d \| -f 1 | grep -qw lux_project 2>/dev/null; then
-    echo -e "${YELLOW}⚠ Database 'lux_project' does not exist${NC}"
+if ! psql -U postgres -lqt | cut -d \| -f 1 | grep -qw online_clipboard 2>/dev/null; then
+    echo -e "${YELLOW}⚠ Database 'online_clipboard' does not exist${NC}"
     echo "Creating database..."
-    psql -U postgres -c "CREATE DATABASE lux_project;" 2>/dev/null || {
+    psql -U postgres -c "CREATE DATABASE online_clipboard;" 2>/dev/null || {
         echo -e "${RED}❌ Failed to create database${NC}"
-        echo "Create it manually: psql -U postgres -c \"CREATE DATABASE lux_project;\""
+        echo "Create it manually: psql -U postgres -c \"CREATE DATABASE online_clipboard;\""
         exit 1
     }
 fi
-echo -e "${GREEN}✓${NC} Database 'lux_project' exists"
+echo -e "${GREEN}✓${NC} Database 'online_clipboard' exists"
 
 # Check if ports are available
 if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null 2>&1 ; then

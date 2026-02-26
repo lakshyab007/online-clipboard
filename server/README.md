@@ -14,7 +14,7 @@ This is the backend server for the Online Clipboard application built with FastA
 
 - Python 3.8+
 - PostgreSQL database running locally
-- Database: `lux_project` at `postgresql://postgres:root@localhost:5432/lux_project`
+- Database: `online_clipboard` at `postgresql://postgres:root@localhost:5432/online_clipboard`
 
 ## Setup
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 Make sure your PostgreSQL database is running and accessible at:
 ```
-postgresql://postgres:root@localhost:5432/lux_project
+postgresql://postgres:root@localhost:5432/online_clipboard
 ```
 
 3. **Run the server:**

@@ -33,7 +33,7 @@ in server dict
  
  for db, we have a local pg instance running on
  
- postgresql://postgres:root@localhost:5432/lux_project
+ postgresql://postgres:root@localhost:5432/online_clipboard
  
  use this
  

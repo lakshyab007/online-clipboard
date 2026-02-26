@@ -36,10 +36,10 @@ echo ""
 
 # Database setup
 echo "🗄️  Setting up database..."
-read -p "Do you want to create the database 'lux_project'? (y/n): " -n 1 -r
+read -p "Do you want to create the database 'online_clipboard'? (y/n): " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    psql -U postgres -c "CREATE DATABASE lux_project;" 2>/dev/null || echo -e "${YELLOW}⚠️  Database might already exist${NC}"
+    psql -U postgres -c "CREATE DATABASE online_clipboard;" 2>/dev/null || echo -e "${YELLOW}⚠️  Database might already exist${NC}"
     echo -e "${GREEN}✅ Database setup complete${NC}"
 fi
 echo ""

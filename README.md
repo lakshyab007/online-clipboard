@@ -69,7 +69,7 @@ Create a PostgreSQL database:
 psql -U postgres
 
 # Create database
-CREATE DATABASE lux_project;
+CREATE DATABASE online_clipboard;
 
 # Exit psql
 \q
@@ -77,7 +77,7 @@ CREATE DATABASE lux_project;
 
 The application expects the database to be accessible at:
 ```
-postgresql://postgres:root@localhost:5432/lux_project
+postgresql://postgres:root@localhost:5432/online_clipboard
 ```
 
 If your PostgreSQL credentials are different, update `DATABASE_URL` in `server/database.py`.
