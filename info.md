@@ -1,4 +1,4 @@
-We want to create basic online clipboard web app. the agenda is to have a web app where user comes, login / signup. add any text to the page, we save it in db. We also want to have a feature where I can share my text with some other user via a sharable link or have a code
+We want to create basic online clipboard web app. the agenda is to have a web app where user comes, login / signup. add any text to the page, we save it in db. We also want to have a feature where I can share my text with some other user via have a code
 
 things you have 
 - server dict 

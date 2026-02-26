@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { LogOut, User } from 'lucide-react';
+import { LogOut, User, Clipboard } from 'lucide-react';
 import { Button } from './Button';
 
 export function Navbar({ user, onLogout }) {
@@ -11,16 +11,19 @@ export function Navbar({ user, onLogout }) {
   };
 
   return (
-    <nav className="bg-white border-b border-gray-200 shadow-sm">
+    <nav className="bg-white border-b border-slate-200 shadow-xs sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-blue-600">
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="bg-primary-600 rounded-lg p-2 group-hover:bg-primary-700 transition-colors">
+              <Clipboard className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
               Clipboard
-            </Link>
-          </div>
+            </span>
+          </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {user ? (
               <>
                 <Link to="/">
@@ -33,15 +36,18 @@ export function Navbar({ user, onLogout }) {
                     Dashboard
                   </Button>
                 </Link>
-                <div className="flex items-center gap-2 text-sm text-gray-700">
-                  <User className="w-4 h-4" />
-                  <span>{user.name}</span>
+                <div className="h-8 w-px bg-slate-200"></div>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50">
+                  <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center">
+                    <User className="w-4 h-4 text-primary-600" />
+                  </div>
+                  <span className="text-sm font-medium text-slate-700">{user.name}</span>
                 </div>
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   size="sm"
                   onClick={handleLogout}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 text-red-600 hover:bg-red-50"
                 >
                   <LogOut className="w-4 h-4" />
                   Logout
